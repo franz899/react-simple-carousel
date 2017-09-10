@@ -10,6 +10,9 @@ The first version is probably only going to be a slider without loop
 
 
 ## Next
+- Remove the unnecessary props
+- Write tests for the remaing code
+- Tidy up the code and Flow definitions
 - Implement loop mode
 - Implement an easy wasy to add more transitions through composition
 - Implement a customisable pagination
