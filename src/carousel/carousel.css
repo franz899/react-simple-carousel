@@ -1,0 +1,19 @@
+.carousel {
+  width: 100%;
+  position: relative;
+}
+
+
+.carousel-container {
+  position: relative;
+}
+
+.carousel-container-list {
+  transition: none;
+}
+
+.carousel-container-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}

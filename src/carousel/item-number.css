@@ -1,0 +1,25 @@
+.item-number {
+  /* pointer-events: none;
+  position: absolute;
+  top: 8;
+  left: 0;
+  width: calc(100vw - 14px); */
+  pointer-events: none;
+  position: absolute;
+  top: 8px;
+  width: calc(100vw - 8px);
+  text-align: right;
+}
+
+.item-number__ {
+  position: absolute;
+  top: 0;
+  right: 8;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0px 12px;
+  border-radius: 14px;
+  font-size: 0.8rem;
+  min-width: 47;
+  text-align: center;
+}

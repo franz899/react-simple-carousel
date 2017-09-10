@@ -1,0 +1,7 @@
+.carousel-item-container {
+  float: left;  
+}
+
+.carousel-item-container.set-height-on-children {
+  height: 100%;
+}
