@@ -2,4 +2,6 @@
 .simple-carousel__list {
   list-style-type: none;
 }
-.simple-carousel__item {}
+.simple-carousel__item {
+  overflow: hidden;
+}

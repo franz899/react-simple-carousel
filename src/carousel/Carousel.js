@@ -44,7 +44,6 @@ type containerListStyleType = {
   transform?: string
 };
 
-
 class Carousel extends React.Component<Props, State> {
   static defaultProps = {
     disabled: false,
@@ -61,7 +60,6 @@ class Carousel extends React.Component<Props, State> {
   };;
 
   hammer: ?Object;
-  // carousel: ?Object;
   timeoutId: ?Object;
   willResetHammer: bool;
 
@@ -74,7 +72,6 @@ class Carousel extends React.Component<Props, State> {
       slideIndex: index || 0,
     };
     this.hammer = null;
-    // this.carousel = null;
     this.timeoutId = null;
     this.willResetHammer = false;
   }
@@ -88,6 +85,12 @@ class Carousel extends React.Component<Props, State> {
 
   componentDidMount() {
     this.setupHammer();
+    window.addEventListener('resize', this.updateBodyWidth, true);
+  }
+
+  updateBodyWidth = () => {
+    const { widthModifier } = this.props;
+    this.setState({ bodyWidth: this.getBodyWith(widthModifier) });
   }
 
   componentWillReceiveProps(nextProps: Props) {
@@ -116,6 +119,7 @@ class Carousel extends React.Component<Props, State> {
   
   componentWillUnmount() {
     this.destroyHammer();
+    window.removeEventListener('resize');
   }
 
   animateToSlide = (slideIndex: number) => {
